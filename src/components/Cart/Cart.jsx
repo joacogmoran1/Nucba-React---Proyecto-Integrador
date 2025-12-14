@@ -3,6 +3,7 @@ import { useContext } from "react";
 // Context
 import { MenuAndCartToggleContext } from "../../context/MenuAndCartToggle";
 import { CartContext } from "../../context/Cart";
+import { ModalContext } from "../../context/Modal";
 
 // Components
 import CartList from "../CartList/CartList";
@@ -17,7 +18,19 @@ import style from './Cart.module.css';
 
 export default function Cart() {
     const { cartToggle, handleCartToggle } = useContext(MenuAndCartToggleContext);
-    const { total } = useContext(CartContext);
+    const { total, clearCart, buyProds } = useContext(CartContext);
+    const { setModal, setFunc, setMessage } = useContext(ModalContext);
+
+    const handleDeleteProds = () => {
+        setFunc(() => clearCart);
+        setModal(true);
+    }
+
+    const handleBuyProds = () => {
+        setMessage('Deseas comprar los vinos?');
+        setFunc(() => buyProds);
+        setModal(true);
+    }
 
     return <div className={style.cart}>
         <AiOutlineShoppingCart className={style.cart_icon} onClick={handleCartToggle} />
@@ -26,6 +39,7 @@ export default function Cart() {
                 <span className={style.cart_container_header_span}>Carrito:</span>
                 <AiOutlineRest
                     className={style.cart_container_header_icon}
+                    onClick={handleDeleteProds}
                 />
             </div>
             <div className={style.cart_container_body}>
@@ -33,7 +47,10 @@ export default function Cart() {
             </div>
             <div className={style.cart_container_footer}>
                 <span className={style.cart_container_footer_span}>Total: ${total}</span>
-                <AiOutlineCreditCard className={style.cart_container_footer_icon} />
+                <AiOutlineCreditCard
+                    className={style.cart_container_footer_icon}
+                    onClick={handleBuyProds}
+                />
             </div>
         </div>
     </div>

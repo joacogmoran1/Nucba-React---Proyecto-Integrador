@@ -68,7 +68,13 @@ export const CartProvider = ({ children }) => {
         alert('Producto Eliminado!');
     }
 
+    const buyProds = () => {
+        alert('Vinos comprados!');
+        clearCart();
+    }
+
     const clearCart = () => {
+        getCart();
         if (!cart?.length) return;
         localStorage.removeItem('cart');
         setCart([]);
@@ -83,7 +89,7 @@ export const CartProvider = ({ children }) => {
         value={{
             cart, total, setTotal,
             addProductToCart, removeProductFromCart,
-            clearCart
+            clearCart, buyProds
         }}
     >
         {children}
