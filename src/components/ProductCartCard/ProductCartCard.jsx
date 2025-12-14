@@ -17,7 +17,7 @@ export default function ProductCartCard(data) {
     const { setModal, setFunc, setFuncPayload, setMessage } = useContext(ModalContext);
     
     const handleRemoveFromCart = () => {
-        setMessage('Deseas eliminar el vino del carrito?');
+        setMessage('Deseas eliminar una unidad?');
         setFunc(() => removeProductFromCart);
         setFuncPayload(data.id);
         setModal(true);

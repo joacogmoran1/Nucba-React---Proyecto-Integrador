@@ -18,7 +18,7 @@ import style from './Cart.module.css';
 
 export default function Cart() {
     const { cartToggle, handleCartToggle } = useContext(MenuAndCartToggleContext);
-    const { total, clearCart, buyProds } = useContext(CartContext);
+    const { cart, total, clearCart, buyProds } = useContext(CartContext);
     const { setModal, setFunc, setMessage } = useContext(ModalContext);
 
     const handleDeleteProds = () => {
@@ -41,6 +41,7 @@ export default function Cart() {
                 <AiOutlineRest
                     className={style.cart_container_header_icon}
                     onClick={handleDeleteProds}
+                    disabled={!cart?.length}
                 />
             </div>
             <div className={style.cart_container_body}>
