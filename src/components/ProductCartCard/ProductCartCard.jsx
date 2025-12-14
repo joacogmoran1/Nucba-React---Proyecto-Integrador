@@ -14,7 +14,7 @@ import style from './ProductCartCard.module.css';
 
 export default function ProductCartCard(data) {
     const { removeProductFromCart, addProductToCart } = useContext(CartContext);
-    const { setModal, setFunc, setFuncPayload } = useContext(ModalContext);
+    const { setModal, setFunc, setFuncPayload, setMessage } = useContext(ModalContext);
     
     const handleRemoveFromCart = () => {
         setMessage('Deseas eliminar el vino del carrito?');
