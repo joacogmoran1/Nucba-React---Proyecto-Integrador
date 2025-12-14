@@ -15,9 +15,10 @@ import Span from "../ui/Span/Span";
 
 export default function ProductCard(prodData) {    
     const { addProductToCart } = useContext(CartContext);
-    const { setModal, setFunc, setFuncPayload } = useContext(ModalContext);
+    const { setModal, setFunc, setFuncPayload, setMessage } = useContext(ModalContext);
 
     const handleAddToCart = () => {
+        setMessage('Deseas añadir el vino al carrito?');
         setFunc(() => addProductToCart);
         setFuncPayload(prodData);
         setModal(true);

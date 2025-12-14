@@ -17,12 +17,14 @@ export default function ProductCartCard(data) {
     const { setModal, setFunc, setFuncPayload } = useContext(ModalContext);
     
     const handleRemoveFromCart = () => {
+        setMessage('Deseas eliminar el vino del carrito?');
         setFunc(() => removeProductFromCart);
         setFuncPayload(data.id);
         setModal(true);
     }
 
     const handleAddToCart = () => {
+        setMessage('Deseas agregar otra unidad?');
         setFunc(() => addProductToCart);
         setFuncPayload(data);
         setModal(true);

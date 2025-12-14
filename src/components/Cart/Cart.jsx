@@ -22,6 +22,7 @@ export default function Cart() {
     const { setModal, setFunc, setMessage } = useContext(ModalContext);
 
     const handleDeleteProds = () => {
+        setMessage('Deseas eliminar los vinos?');
         setFunc(() => clearCart);
         setModal(true);
     }
