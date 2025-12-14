@@ -38,11 +38,13 @@ export default function Cart() {
         <div className={[style.cart_container, cartToggle? style.cart_container_open : style.cart_container_closed].join(' ')}>
             <div className={style.cart_container_header}>
                 <span className={style.cart_container_header_span}>Carrito:</span>
-                <AiOutlineRest
-                    className={style.cart_container_header_icon}
-                    onClick={handleDeleteProds}
-                    disabled={!cart?.length}
-                />
+                {
+                    !cart?.length? null
+                    : <AiOutlineRest
+                        className={style.cart_container_header_icon}
+                        onClick={handleDeleteProds}
+                    />
+                }
             </div>
             <div className={style.cart_container_body}>
                 <CartList />
