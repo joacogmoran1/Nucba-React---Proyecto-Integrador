@@ -1,0 +1,55 @@
+
+.nav, .nav_links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav_icon {
+    font-size: 23px;
+}
+
+.nav_links {
+    transition: all 0.5s ease-in-out;
+
+    background-color: var(--black-light);
+    
+    padding: 20px;
+    height: 100dvh;
+    width: 200px;
+
+    position: absolute;
+    top: 50px; right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_links_open {
+    transform: translateX(0);
+}
+
+.nav_links_closed {
+    transform: translateX(100%);
+}
+
+/* Small Laptops - 895.5 */
+@media (min-width: 768px) {
+    .nav { flex-direction: row; }
+    .nav_icon { display: none; }
+    .nav_links {
+        transform: translateX(0);
+        transition: none;         
+
+        padding: 0;
+        height: 0;
+        width: fit-content;
+
+        position: static;
+        top: 0; left: 0;
+
+        flex-direction: row;
+    }
+}

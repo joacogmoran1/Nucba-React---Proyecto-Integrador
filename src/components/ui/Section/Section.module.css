@@ -1,0 +1,120 @@
+.content_section {
+    background-color: var(--black-light);
+
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content_section_image {
+    height: 250px;
+    width: 100%;
+}
+
+.content_section_image > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.content_section_content_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.content_section_content_container_text {
+    text-align: center;
+    font-size: var(--section-text-font-size);
+    line-height: var(--section-text-line-height);
+    color: #fff;
+}
+
+.content_section_content_container_button {
+    background-color: transparent;
+    border: 1px solid #fff;
+
+    padding: 7px;
+    width: fit-content;
+
+    font-size: var(--section-text-font-size);
+    color: #fff;
+}
+
+/* Tablet - 623.5 */
+@media (min-width: 480px) and (max-width: 767px) {}
+
+/* Small Laptops - 895.5 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content_section {
+        padding-bottom: 0;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+
+    .content_section_image,
+    .content_section_content {
+        flex: 1;
+    }
+
+    .content_section_image {
+        height: 350px;
+    }
+
+    .content_section_content_container {
+        padding-inline: 20px;
+    }
+}
+
+/* Laptop - 1511.5 */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .content_section {
+        padding-bottom: 0;
+        
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+
+    .content_section_image,
+    .content_section_content {
+        flex: 1;
+    }
+
+    .content_section_image {
+        height: 350px;
+    }
+
+    .content_section_content_container {
+        padding-inline: 30px;
+    }
+}
+
+/* Monitor */
+@media (min-width: 1200px) {
+    .content_section {
+        padding-bottom: 0;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+
+    .content_section_image,
+    .content_section_content {
+        flex: 1;
+    }
+
+    .content_section_image {
+        height: 500px;
+    }
+
+    .content_section_content_container {
+        padding-inline: 50px;
+    }
+}

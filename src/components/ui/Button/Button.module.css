@@ -1,0 +1,15 @@
+
+
+.button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    
+    padding: 7px;
+    width: 130px;
+
+    font-size: 15px;
+}
+
+.button:disabled {
+    background-color: rgba(128, 128, 128, 0.438);
+}

@@ -1,0 +1,81 @@
+
+
+
+.container {
+    background-color: var(--black-light);
+
+    padding-bottom: 10px;
+
+    height: 370px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container_header {
+    height: 200px;
+    width: 100%;
+}
+
+.container_body,
+.container_footer {
+    padding-inline: 10px;
+}
+
+.container_header > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container_body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container_body_name {
+    border: 1px solid #fff;
+    padding: 5px;
+
+    text-align: center;
+}
+
+.container_body_name > span {
+    font-size: 15px;
+}
+
+.container_body_data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container_body_data_wine {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_body_data_wine > span {
+    font-size: 15px;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_footer > span {
+    font-size: 15px;
+}
+
+.container_footer_btn {
+    height: 25px;
+    width: 25px;
+}

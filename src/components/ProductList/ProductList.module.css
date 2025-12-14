@@ -1,0 +1,37 @@
+
+.container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+/* Tablet - 623.5 */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Laptops - 895.5 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop - 1511.5 */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Monitor */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

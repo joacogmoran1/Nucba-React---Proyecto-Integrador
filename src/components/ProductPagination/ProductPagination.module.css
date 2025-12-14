@@ -1,0 +1,36 @@
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.container_btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    
+    padding: 7px;
+    width: 70px;
+
+    font-size: 15px;
+}
+
+.container_btn:disabled {
+    background-color: rgba(128, 128, 128, 0.438);
+}
+
+.container_span {
+    width: 25px;
+
+    text-align: center;
+    color: #fff;
+}
+
+/* Small Laptops - 895.5 */
+@media (min-width: 480px) {
+    .container {
+        max-width: 200px;
+    }
+}

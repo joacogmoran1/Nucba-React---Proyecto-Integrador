@@ -1,0 +1,35 @@
+
+
+.container {
+    background-color: var(--black);
+    border: 1px solid #fff;
+    padding: 20px;
+
+    height: fit-content;
+    width: 250px;
+
+    position: fixed;
+    z-index: 5;
+    top: 70px;
+    left: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container > p {
+    text-align: center;
+}
+
+.container_btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container_btns > button {
+    background-color: transparent;    
+    border: 1px solid #fff;
+    padding: 7px;
+}

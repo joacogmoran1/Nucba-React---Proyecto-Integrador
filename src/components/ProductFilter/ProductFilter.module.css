@@ -1,0 +1,45 @@
+
+
+.container {
+    background-color: transparent;
+    border: 1px solid #fff;
+
+    padding: 5px 7px;
+    width: 100%;
+
+    font-size: var(--section-text-font-size);
+    color: #fff;
+}
+
+.container > option {
+    color: #000;
+}
+
+
+/* Tablet - 623.5 */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 130px;
+    }
+}
+
+/* Small Laptops - 895.5 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 130px;
+    }
+}
+
+/* Laptop - 1511.5 */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        width: 130px;
+    }
+}
+
+/* Monitor */
+@media (min-width: 1200px) {
+    .container {
+        width: 170px;
+    }
+}
